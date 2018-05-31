@@ -74,7 +74,7 @@ class DialogDevicesRTL(wx.Dialog):
         dc.SetFont(self.gridDev.GetLabelFont())
         maxHeight = 0
         for i in range(self.COLS - 1):
-            _w, h, _hl = dc.GetMultiLineTextExtent(self.gridDev.GetColLabelValue(i))
+            _w, h, _hl = dc.GetFullMultiLineTextExtent(self.gridDev.GetColLabelValue(i))
             if h > maxHeight:
                 maxHeight = h
         self.gridDev.SetColLabelSize(maxHeight * 1.25)

@@ -125,7 +125,7 @@ class PanelGraph(wx.Panel):
 
         self.timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.__on_timer, self.timer)
-  
+
     def __set_fonts(self):
         axes = self.plot.get_axes()
         if axes is not None:
@@ -696,7 +696,7 @@ class PanelMeasure(wx.Panel):
         self.grid.SetColSize(7, 1)
         self.grid.SetColSize(11, 1)
         self.grid.SetColSize(15, 1)
-        self.grid.SetMargins(0, wx.SystemSettings_GetMetric(wx.SYS_HSCROLL_Y))
+        self.grid.SetMargins(0, wx.SystemSettings.GetMetric(wx.SYS_HSCROLL_Y))
 
         for x in range(self.grid.GetNumberRows()):
             self.grid.SetRowLabelValue(x, '')

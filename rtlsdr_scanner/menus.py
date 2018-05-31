@@ -42,7 +42,7 @@ class MenuMain(object):
         recent = wx.Menu()
         settings.fileHistory.UseMenu(recent)
         settings.fileHistory.AddFilesToMenu()
-        file.AppendMenu(wx.ID_ANY, "&Recent Files", recent)
+        file.Append(wx.ID_ANY, "&Recent Files", recent)
         file.AppendSeparator()
         self.save = file.Append(wx.ID_SAVE, "&Save As...",
                                 "Save plot_line")
